@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools for Small Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-light: #1e293b;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: var(--navy-dark);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 24px; color: var(--white); }
+        h2 { font-size: 2.5rem; margin-bottom: 48px; text-align: center; }
+        h3 { font-size: 1.5rem; margin-bottom: 16px; }
+        
+        p { margin-bottom: 24px; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--border);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .btn-full {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--navy-dark);
+            padding: 24px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--navy-dark);
+            padding: 160px 0 100px;
+            color: var(--white);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .process-card {
+            padding: 32px;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* Services / Projects Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .grid-2x2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .pricing-card {
+            background-color: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 8px;
+        }
+
+        .timeline {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-weight: 500;
+            display: inline-block;
+            background-color: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 16px;
+        }
+
+        /* About Section */
+        .why-me {
+            padding: 100px 0;
+            background-color: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .why-me h2 {
+            color: var(--white);
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .why-text p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy-dark);
+            color: #64748b;
+            padding: 48px 0;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero { padding: 120px 0 60px; }
+            .why-content { grid-template-columns: 1fr; gap: 40px; }
+            .hero-actions { flex-direction: column; }
+            .grid-2x2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">AI Builder</a>
+            <a href="#book" class="btn">Send me a message</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>AI tools that actually work. Built for small businesses.</h1>
+            <p>I build discrete, fixed-price AI tools for solopreneurs, freelancers, and tiny teams (1-10 people). You tell me what you need, I build it, you pay a flat fee, and it's done.</p>
+            <div class="hero-actions">
+                <a href="#services" class="btn">See Projects & Pricing</a>
+                <a href="#book" class="btn btn-outline">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="grid-3">
+                <div class="process-card">
+                    <span class="step-number">Step 01</span>
+                    <h3>Tell me what you need</h3>
+                    <p>We jump on a quick call or chat via email. You explain the bottleneck in your business or the tool you want.</p>
+                </div>
+                <div class="process-card">
+                    <span class="step-number">Step 02</span>
+                    <h3>I build it</h3>
+                    <p>I get to work. No hourly billing, no scope creep. Just a fixed price and a clear timeline to deliver your tool.</p>
+                </div>
+                <div class="process-card">
+                    <span class="step-number">Step 03</span>
+                    <h3>You use it</h3>
+                    <p>I hand over the working tool, show you how to use it, and you start saving time and serving your customers better.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Typical Projects</h2>
+            <div class="grid-2x2">
+                
+                <!-- Project 1 -->
+                <div class="pricing-card">
+                    <h3>Document Chatbot</h3>
+                    <div class="price">€2,500</div>
+                    <div><span class="timeline">1-2 weeks</span></div>
+                    <p>Stop searching through folders. I'll build a secure chatbot where you can upload all your PDFs, manuals, or company documents and chat directly with them to find answers instantly.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="pricing-card">
+                    <h3>Course/Training Bot</h3>
+                    <div class="price">€2,000</div>
+                    <div><span class="timeline">1 week</span></div>
+                    <p>Give your students a 24/7 tutor. A Q&A bot trained strictly on your course materials, videos, and transcripts to help your community learn faster without needing your direct support.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="pricing-card">
+                    <h3>Customer Support Bot</h3>
+                    <div class="price">€3,000</div>
+                    <div><span class="timeline">2 weeks</span></div>
+                    <p>An intelligent FAQ bot trained on your documentation and past support tickets. It lives on your website and handles the repetitive questions so you can focus on growing your business.</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="pricing-card">
+                    <h3>AI Workflow Tool</h3>
+                    <div class="price">€1,500 - €2,500</div>
+                    <div><span class="timeline">1 week</span></div>
+                    <p>A custom automation tailored to your exact workflow. Whether it's triaging incoming emails, extracting data from invoices, or drafting proposals based on client notes.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me">
+        <div class="container why-content">
+            <div class="why-text">
+                <h2>I'm a developer who builds things.</h2>
+                <p>I'm not here to sell you a 50-page strategy document. I'm a developer who writes code and ships working tools.</p>
+                <p>I work directly with solopreneurs and tiny teams who need practical AI solutions but don't want to hire a full-time developer or deal with complicated agency contracts.</p>
+            </div>
+            <div class="cta-box" id="book" style="background-color: var(--navy-light); padding: 48px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="color: var(--white); margin-bottom: 8px;">Let's talk about your project</h3>
+                <p style="color: #94a3b8; margin-bottom: 32px;">Pick a time that works for you or just send me a message to get started. I'll let you know if I can build it.</p>
+                <a href="https://calendly.com/" target="_blank" class="btn btn-full">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Builder. Built for small businesses.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
