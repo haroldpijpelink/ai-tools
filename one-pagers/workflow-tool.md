@@ -34,4 +34,4 @@ Price depends on complexity. Includes:
 
 Send me a message describing the task you want automated. I'll tell you if it's a fit and what it would cost.
 
-[**→ Get in touch**](#book)
+[**→ Get in touch**](mailto:haroldpijpelink@proton.me?subject=Workflow%20Tool%20Project)

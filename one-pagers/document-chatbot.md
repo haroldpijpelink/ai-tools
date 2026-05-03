@@ -31,4 +31,4 @@ Includes:
 
 Book a 30-minute call to talk through your documents and use case.
 
-[**→ Schedule a call**](#book)
+[**→ Schedule a call**](mailto:haroldpijpelink@proton.me?subject=Document%20Chatbot%20Project)

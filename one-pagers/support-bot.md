@@ -31,4 +31,4 @@ Includes:
 
 Book a 30-minute call to talk through your support flow and documentation.
 
-[**→ Schedule a call**](#book)
+[**→ Schedule a call**](mailto:haroldpijpelink@proton.me?subject=Support%20Bot%20Project)

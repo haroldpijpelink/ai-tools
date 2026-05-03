@@ -31,4 +31,4 @@ Includes:
 
 Book a 30-minute call to walk through your course and use case.
 
-[**→ Schedule a call**](#book)
+[**→ Schedule a call**](mailto:haroldpijpelink@proton.me?subject=Course%20Bot%20Project)
